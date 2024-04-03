@@ -33,11 +33,14 @@ import os
 
 def tulos_dirs(suun):
     print('\n Kansion sisään', suun)
-    for i_piste in os.listdir(suun):
-        polku = os.path.join(suun, i_piste)
-        print('      ', polku)
+    if os.path.exists(suun):
+        for i_piste in os.listdir(suun):
+            polku = os.path.join(suun, i_piste)
+            print('      ', polku)
+    else:
+        print('Ei ole')
 
-sunni_lista = ['PycharmProjects']
+sunni_lista = ['Modul 5', 'Modul 6']
 for i_suun in sunni_lista:
-    tietopolku = os.path.abspath(os.path.join('..','..', i_suun))
+    tietopolku = os.path.abspath(os.path.join('..', '..', i_suun))
     tulos_dirs(tietopolku)
