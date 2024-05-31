@@ -34,7 +34,7 @@ all_paths = tieto_etsi(
     "..",
     (
         "main1.py",
-        "main2.py",
+        "2main.py",
         "main3.py",
     ),
 )
